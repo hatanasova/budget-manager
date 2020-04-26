@@ -1,0 +1,19 @@
+{
+  "hosting": [
+    {
+      "target": "budget-manager",
+      "public": "dist/budget-manager",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ]
+    }
+  ]
+}

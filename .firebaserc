@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "budget-manager-ddea4": {
+      "hosting": {
+        "budget-manager": [
+          "budget-manager-ddea4"
+        ]
+      }
+    }
+  }
+}
