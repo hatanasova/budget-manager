@@ -1,0 +1,19 @@
+@import "../../../styles.scss";
+
+.mat-toolbar {
+    background-color: $brand-green;
+    color: $brand-lighter;
+  
+    .logo {
+      margin-right: 6px;
+    }
+  
+    .example-fill-remaining-space {
+      flex: 1 1 auto;
+    }
+  
+    .about-app-btn {
+        color: $brand-dark;
+    }
+  }
+  
