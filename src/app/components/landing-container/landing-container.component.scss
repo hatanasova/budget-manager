@@ -2,7 +2,7 @@
 
 .main-container {
   display: flex;
-  padding: 20px;
+  padding: 20px 0;
   align-items: center;
 
   .landing-container {
@@ -12,34 +12,72 @@
     .landing-image {
       width: 65%;
     }
-  }
 
-  .heading-title-container {
-    display: flex;
-    align-items: center;
-    color: $brand-darker;
-    padding: 8px;
+    .heading-title-container {
+      display: flex;
+      align-items: center;
+      color: $brand-darker;
+      padding: 8px;
 
-    .heading-title {
-      color: $brand-dark;
-      font-size: 32px;
-      padding: 0 24px;
-      width: 100%;
-      margin: 0 auto;
+      .content-container {
+        text-align: center;
+
+        .heading-title {
+          color: $brand-dark;
+          font-size: 32px;
+          padding: 0 24px;
+          margin: 0 auto;
+        }
+
+        .landing-actions {
+          button[mat-flat-button] {
+            background-color: $brand-dark;
+            color: $brand-light;
+            font-size: 26px;
+            font-weight: 400;
+            padding: 8px 20px;
+            margin-top: 26px;
+            display: flex;
+            align-items: center;
+            margin-left: auto;
+            margin-right: auto;
+
+            @media screen and (min-width: 768px) {
+              font-size: 32px;
+              padding: 18px 28px;
+            }
+          }
+        }
+      }
     }
 
-    .landing-actions {
-      button[mat-flat-button] {
-        background-color: $brand-dark;
-        color: $brand-light;
-        font-size: 26px;
-        font-weight: 400;
-        padding: 8px 20px;
-        margin-top: 26px;
+    @media screen and (max-width: 768px) {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+
+      .landing-image {
+        width: 90vw;
+        height: auto;
+        margin: 0 auto;
+      }
+
+      .heading-title-container {
         display: flex;
+        width: 90vw;
+        margin: 40px auto 0;
         align-items: center;
-        margin-left: auto;
-        margin-right: auto;
+        text-align: center;
+        justify-content: center;
+
+        .heading-title {
+          font-size: 36px;
+          margin-bottom: 50px;
+
+          @media screen and (max-width: 420px) {
+            font-size: 26px;
+          }
+        }
       }
     }
   }
