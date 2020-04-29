@@ -1,0 +1,45 @@
+@import "../../../styles.scss";
+
+.footer-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  margin-top: auto;
+  margin-left: auto;
+  margin-right: auto;
+  border-top: 1px solid;
+  border-color: $brand-dark;
+  padding: 10px 0;
+
+  .copy-info {
+    display: flex;
+    align-items: center;
+    color: $brand-dark;
+
+    .copyright-icon {
+      width: 6px;
+      height: auto;
+      margin-right: 30px;
+    }
+
+    .github-link {
+      margin: 30px;
+      a {
+        text-decoration: none;
+        color: $brand-dark;
+      }
+      a:hover {
+          color: $brand-darker;
+      }
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    position: absolute;
+    width: 100vw;
+    align-items: center;
+    bottom: 0;
+    display: flex;
+  }
+}

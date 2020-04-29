@@ -16,12 +16,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { from } from 'rxjs';
 import { HeaderComponent } from './components/header/header.component';
 import { LandingContainerComponent } from './components/landing-container/landing-container.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     LandingContainerComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
@@ -36,4 +38,5 @@ import { LandingContainerComponent } from './components/landing-container/landin
   providers: [],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }
