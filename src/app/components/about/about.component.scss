@@ -1,0 +1,64 @@
+@import "../../../styles.scss";
+
+@media only screen and (max-width: 420px) {
+  .about-container {
+    .about-content {
+      width: 90% !important;
+      margin: 20px auto !important;
+    }
+
+    .about-title h1 {
+        font-size: normal !important;
+    }
+
+    .about-description p {
+        text-align: justify;
+    }
+  }
+}
+
+.about-container {
+  width: 100%;
+  margin-bottom: auto;
+
+  .about-cover-img {
+    width: 100vw;
+    height: auto;
+  }
+
+  .about-content {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    margin: 60px auto;
+    padding: 40px 0;
+    align-items: center;
+    background-color: $brand-light;
+    border: 1px solid $brand-light;
+    border-radius: 20px;
+    box-shadow: 0px 0px 6px 2px #ccc;
+    color: $brand-dark;
+
+    .about-title {
+      width: 100%;
+      clear: both;
+      align-items: center;
+      text-align: center;
+      margin-bottom: 6px;
+
+      h1 {
+        font-size: xx-large;
+      }
+    }
+
+    .about-description {
+      width: 80%;
+      text-align: center;
+      margin-top: 10px;
+
+      p {
+        font-size: large;
+      }
+    }
+  }
+}
