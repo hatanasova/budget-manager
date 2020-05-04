@@ -6,6 +6,29 @@ $brand-darker: #17252a;
 $brand-light: #def2f1;
 $brand-lighter: #feffff;
 
-html, body { height: 100%; width: 100%; position: absolute;}
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.link-to {
+  text-decoration: none;
+  outline: none;
+}
 
+.text-spacing {
+  letter-spacing: 1.5px;
+}
+
+.mat-flat-button, 
+.button {
+  color: $brand-dark;
+  margin-right: 6px;
+  text-decoration: none;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}

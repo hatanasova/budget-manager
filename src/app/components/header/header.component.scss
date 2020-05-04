@@ -21,9 +21,10 @@
     flex: 1 1 auto;
   }
 
-  .about-app-btn {
-    color: $brand-dark;
-    margin-right: 6px;
-    text-decoration: none;
+  .logout-btn {
+    background-color: $brand-dark;
+    color: $brand-lighter;
+    margin-right: 10px;
+    font-weight: 400;
   }
 }

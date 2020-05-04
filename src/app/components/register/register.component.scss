@@ -1,0 +1,70 @@
+@import "../../../styles.scss";
+
+.register-container {
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 100px;
+
+  .register-cover-img {
+    width: 60vw;
+  }
+
+  .register-content {
+    width: 90%;
+    height: 40vh;
+    margin-right: 80px;
+    background-color: $brand-light;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    box-shadow: 0px 0px 12px 4px #ccc;
+
+    .welcome-user {
+      text-align: center;
+      color: $brand-dark;
+    }
+
+    .auth-form {
+      margin: auto;
+      padding: 60px 0;
+
+      .sign-up-title {
+        color: $brand-dark;
+        font-weight: 500;
+      }
+
+      .inputs input {
+        width: 20vw;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 10px;
+        margin-bottom: 16px;
+        border: none;
+        border-radius: 6px;
+      }
+      input::placeholder {
+        font-size: 14px;
+        color: $brand-dark;
+      }
+
+      .sign-up-btn {
+        background-color: $brand-dark;
+        color: $brand-lighter;
+        font-weight: 400;
+        font-size: large;
+        padding: 6px 24px;
+      }
+
+      .go-to-login {
+        color: $brand-dark;
+        font-size: larger;
+        margin-top: 20px;
+        cursor: pointer;
+      }
+    }
+  }
+}

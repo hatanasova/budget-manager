@@ -1,0 +1,36 @@
+<div class="register-container">
+    <div class="register-cover">
+        <img class="register-cover-img" src="../../../assets/images/authentication.png" alt="Register Cover">
+    </div>
+
+    <div class="register-content">
+        <div class="welcome-user-container">
+            <h1 class="welcome-user text-spacing" *ngIf="authenticationService.userData | async">Hello,
+                {{ (authenticationService.userData | async)?.email }}
+            </h1>
+        </div>
+
+        <div class="to-app">
+            <a class="link-to" *ngIf="authenticationService.userData | async" routerLink="">Take me to app!</a>
+        </div>
+
+        
+        <div class="auth-form" *ngIf="!(authenticationService.userData | async)">
+            <h1 class="sign-up-title">Log In</h1>
+            <div class="inputs input-email">
+                <input type="text" [(ngModel)]="email" placeholder="email@example.com">
+            </div>
+            <div class="inputs input-password">
+                <input type="password" [(ngModel)]="password" placeholder="********">
+            </div>
+
+            
+            <div class="button">
+                <button mat-flat-button class="sign-up-btn text-spacing" (click)="signIn()">Log In</button>
+            </div>
+            
+            <p class="go-to-login text-spacing link-to" routerLink="/register">Don't have an account?</p>
+        </div>
+
+    </div>
+</div>
