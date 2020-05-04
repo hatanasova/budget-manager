@@ -2,11 +2,15 @@
     <span class="material-icons logo">
         polymer
     </span>
-    <span class="link-to-homepage" routerLink="/">Buddgetly</span>
+    <span class="link-to-homepage link-to" routerLink="/">Buddgetly</span>
 
     <span class="example-fill-remaining-space"></span>
 
+    <div *ngIf="authenticationService.userData | async">
+        <button mat-flat-button class="button logout-btn text-spacing link-to" (click)="signOut()">Logout</button>
+    </div>
+
     <button mat-flat-button>
-        <a class="about-app-btn" routerLink="/about-app">About App</a>
+        <a class="button about-app-btn text-spacing link-to" routerLink="/about-app">About App</a>
     </button>
 </mat-toolbar>
