@@ -16,7 +16,7 @@ export class AuthenticationService {
     this.userData = angularFireAuth.authState;
   }
 
-  /* Sign up */
+  // Sign up
   SignUp(email: string, password: string) {
     this.angularFireAuth
       .createUserWithEmailAndPassword(email, password)
@@ -24,12 +24,18 @@ export class AuthenticationService {
         console.log('Successfully signed up!', res);
       })
       .catch((error) => {
-        console.log('Something is wrong:', error.message);
+        let errorContainer = document.getElementById('register-errors');
+        let errorMessage = error.message;
+        let formattedErrorMessage = errorMessage.replace(
+          'createUserWithEmailAndPassword failed: ',
+          ''
+        );
+        errorContainer.innerHTML = formattedErrorMessage;
       });
     this.ngOnInit();
   }
 
-  /* Sign in */
+  // Sign in
   SignIn(email: string, password: string) {
     this.angularFireAuth
       .signInWithEmailAndPassword(email, password)
@@ -37,20 +43,30 @@ export class AuthenticationService {
         console.log('Successfully signed in!');
       })
       .catch((err) => {
-        console.log('Something is wrong:', err.message);
+        let errorContainer = document.getElementById('login-errors');
+        let errorMessage = err.message;
+        let formattedErrorMessage = errorMessage.replace(
+          'signInWithEmailAndPassword failed: ',
+          ''
+        );
+        errorContainer.innerHTML = formattedErrorMessage;
       });
     this.ngOnInit();
   }
 
-  /* Sign out */
+  // Sign out
   SignOut() {
     this.angularFireAuth.signOut();
+    this.angularFireAuth.authState.subscribe((user) => {
+      // Redirect user after logout
+      this.router.navigate(['login']);
+    });
   }
 
+  // Redirect on login or registration
   ngOnInit() {
     this.angularFireAuth.authState.subscribe((user) => {
-      if (!user) this.router.navigate(['']);
-      else this.router.navigate(['about-app']);
+      if (user) this.router.navigate(['management']);
     });
   }
 }

@@ -6,6 +6,12 @@ $brand-darker: #17252a;
 $brand-light: #def2f1;
 $brand-lighter: #feffff;
 
+.errors {
+  color: #cc0000;
+  letter-spacing: 1px;
+  font-weight: 400;
+}
+
 .link-to {
   text-decoration: none;
   outline: none;

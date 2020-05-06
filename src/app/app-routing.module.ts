@@ -5,6 +5,7 @@ import { LandingContainerComponent } from './components/landing-container/landin
 import { AboutComponent } from './components/about/about.component';
 import { RegisterComponent } from './components/register/register.component';
 import { LoginComponent } from './components/login/login.component';
+import { ManagementComponent } from './components/management/management.component';
 
 import { from } from 'rxjs';
 
@@ -13,6 +14,7 @@ const routes: Routes = [
   { path: 'about-app', component: AboutComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'login', component: LoginComponent },
+  { path: 'management', component: ManagementComponent },
 ];
 
 @NgModule({

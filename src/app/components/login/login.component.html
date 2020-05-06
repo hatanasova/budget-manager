@@ -18,6 +18,7 @@
         <div class="auth-form" *ngIf="!(authenticationService.userData | async)">
             <h1 class="sign-up-title">Log In</h1>
             <div class="inputs input-email">
+                <p id="login-errors" class="errors"></p>
                 <input type="text" [(ngModel)]="email" placeholder="email@example.com">
             </div>
             <div class="inputs input-password">
